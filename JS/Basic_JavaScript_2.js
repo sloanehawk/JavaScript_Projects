@@ -9,3 +9,8 @@ function function2() {
     str2 += " violets are blue";
     document.getElementById("concatenate").innerHTML = str2;
 }
+
+function timesTwo(a) {
+    var num = a*2;
+    document.getElementById("three").innerHTML = num;
+}
