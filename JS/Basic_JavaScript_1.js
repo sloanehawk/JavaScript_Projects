@@ -21,3 +21,7 @@ var dog3 = dog3.fontcolor("gray")
 document.write(dog3)
 
 document.write(3*4)
+
+function displayDate() {
+    document.getElementById("date").innerHTML = Date();
+}
