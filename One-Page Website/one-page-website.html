@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Electric Forest</title>
+		<link rel="stylesheet" href="./css/one_page_website.css">
+	</head>
+	<body>
+		<!-- NAV -->
+		<ul>
+			<a href="#home"><li>Home</li></a>
+			<a href="#gallery"><li>Gallery</li></a>
+			<a href="#videos"><li>Videos</li></a>
+			<a href="#mailing"><li>Mailing List</li></a>
+		</ul>
+		<!-- END NAV -->
+		
+		
+		<!-- HOME PAGE -->
+		<section>
+			<h1 id="home">HOME</h1>
+			<p><em>And into the forest I go,<br>
+			to lose my mind and find my soul.</em><br>
+			&nbsp - John Muir</p>
+		</section>
+		<!-- END HOME PAGE -->
+		
+		
+		<!-- GALLERY -->
+		<section>
+			<h1 id="gallery">GALLERY</h1>
+			<div class="row">
+				<div class="column">
+					<img src="./images/img_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+				</div>
+				
+				<div class="column">
+					<img src="./images/img_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+				</div>
+				
+				<div class="column">
+					<img src="./images/img_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+				</div>
+				
+				<div class="column">
+					<img src="./images/img_4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+				</div>
+				
+				<div class="column">
+					<img src="./images/img_5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+				</div>
+				
+				<div class="column">
+					<img src="./images/img_6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+				</div>
+			</div>
+		
+			
+		<!-- LIGHTBOX -->
+
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+				
+				<div class="mySlides">
+					<div class="numbertext">1 / 6</div> 
+					<img src="./images/img_1.jpg">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">2 / 6</div> 
+					<img src="./images/img_2.jpg">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">3 / 6</div> 
+					<img src="./images/img_3.jpg">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">4 / 6</div> 
+					<img src="./images/img_4.jpg">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">5 / 6</div> 
+					<img src="./images/img_5.jpg">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">6 / 6</div> 
+					<img src="./images/img_6.jpg">
+				</div>
+
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- Thumbnail image controls -->
+				<div class="column">
+					<img class="demo" src="./images/img_1.jpg" onclick="currentSlide(1)" alt="Heart">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/img_2.jpg" onclick="currentSlide(2)" alt="Sherwood Forest">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/img_3.jpg" onclick="currentSlide(3)" alt="Bassnectar">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/img_4.jpg" onclick="currentSlide(4)" alt="Sherwood Forest">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/img_5.jpg" onclick="currentSlide(5)" alt="The Observatory">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/img_6.jpg" onclick="currentSlide(6)" alt="Magician">
+				</div>
+			</div>
+		</div>
+		
+		
+		</section>
+		<!-- END GALLERY -->
+		
+		
+		<!-- VIDEOS -->
+		<section>
+			<h2 id="videos">VIDEOS</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Nl_H1gIwsUs" allowfullscreen></iframe>
+				
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/uNtIRIIIjoY" allowfullscreen></iframe>
+				
+		</section>	
+		<!-- END VIDEOS -->
+		
+		
+		
+		
+		<!-- MAILING LIST -->
+		<section>
+			<h4 id="mailing">Mailing List</h4>
+			<p><em>Please fill out the form below to receive updates.</em></p>
+			<form action="" method="get">
+				<input type="text" placeholder="First Name"><br>
+				<input type="text"placeholder="Last Name"><br>
+				<input type="text" placeholder="Email"><br>
+			<input type="submit" value="Submit">
+			</form>
+		</section>
+		<!-- END MAILING LIST -->
+
+		<!-- FOOTER -->
+		<footer>
+			<p>Contact information: sloanehawkins@gmail.com</p>
+		</footer>
+		<!-- END FOOTER-->
+		<script src="JS/one_page_website.js"></script>
+	</body>
+</html>
