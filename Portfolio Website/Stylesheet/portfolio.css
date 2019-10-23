@@ -1,0 +1,410 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    margin: 0%; /*Ensures the site displays all the way to the edge of the browser screen*/
+    opacity: 1;
+    transition: 3s opacity; /* 3 second fade in */
+    letter-spacing: .2vw;
+    font-family: Avant Garde,Helvetica;
+    font-size:1.5vw;
+}
+
+/* Navbar */
+.Navbar {
+    overflow: hidden; /* Ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+    background-color: black;
+    position: fixed; /* Keeps the navbar at the top of the screen */
+    top: 0; 
+    width: 100%;
+    z-index: 1; /* Ensures other elements don't display over the navbar */
+    position: fixed;
+    -webkit-animation: moveNav 5s; /* Safar 4.0-8.0 */
+    animation: moveNav 5s;
+}
+
+/* Navbar text */
+.Navbar a {
+    float: left;
+    display: block; /*Ensures that other text will be displayed on the same line or row */
+    color: white;
+    padding: .75vw 1vw;
+    text-decoration:none;
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw;
+    text-align: center;
+    position: relative;
+    -webkit-animation: movenavText 5.75s; /* Safari 4.0-8.0 */
+    animation: movnavText 5.75s;
+    letter-spacing: .2vw;
+}
+
+
+/* animation effect for moving the nav bar in from above the top of the screen when page loads */
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+@keyframes movenavText {
+    from {top: -100vw;}
+    to {left: 0vw;}
+}
+
+/* animation effect for overlay video text when page loads */
+@keyframes movevideoText {
+    from {top: -100vw;}
+    to {left: 0vw;}
+}
+
+/* Navbar hover effect */
+.Navbar a:hover {
+    background-color: #8FC1E3;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+/* Navbar home button */
+.Navbar a.active { 
+    background-color: #5085A5;
+}
+
+/* causes video to zoom out from a zoomed in position when page loads */
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1.5,1.5);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+/* Video */
+#Typing_Video {
+    position: fixed; 
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    top: 0;
+    z-index: -1;
+    animation: zoominoutsinglefeatured 5s;
+}
+
+/* Text over the video */
+.Video_Text {
+    background: rgba(143, 193, 227, 0.5);
+    color: black;
+    width: 100%;
+    padding-top: .1vh;
+    padding-bottom: 1vh;
+    margin-top: 23%;
+    position: relative;
+    -webkit-animation: movevideoText 4s; /* Safari 4.0 - 8.0 */
+    animation: movevideoText 4s; 
+    
+}
+
+/* Slideshow section styling */
+
+#Slideshow_Container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+.Slide_Show_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0,0,0,.75);
+    width: auto;
+}
+
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+/* positioning the right-hand next button */
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+/* Slideshow text */
+.text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    background-color:rgba(0,0,0,0.75);
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+}
+
+/* Number text */
+.Slide_Number {
+    color: white;
+    position: absolute;
+    top: 0;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    display: none;
+}
+
+/* dots */
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.active, .dot:hover {
+    background-color: black;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
+/* Table */
+* {
+    box-sizing: border-box;
+}
+
+.Column_1 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    height: 448px; 
+    background-color: #8FC1E3;
+}
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    height: 448px;
+    background-color: #F7F9FB;
+}
+
+
+.Row:after {
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+/* Heading 1 elements */
+h1 {
+    text-transform: uppercase;
+    font-family: "Trebuchet MS", Optima;
+    text-align: center;
+    margin-top: 3%;
+    color: #F7F9FB;
+}
+
+/* Paragraph elements */
+p {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: justify;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    color: #F7F9FB;
+}
+
+/* Center align elements - this embraces all centered text */
+center {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: center;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+/* Anchor elements */
+a {
+    color: #31708E;
+}
+
+/* Quotation elements */
+q {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Image elements */
+img {
+    filter: grayscale(75%); 
+    border-radius: 8px;
+    max-width: 100%;
+    height: 100%;
+    margin: auto auto auto auto;
+    display: block; /* allows images to be centered */
+}
+
+center:hover {
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+p:hover {
+    color: #31708E;
+    transition: transform 1s;
+    transform: scale(1.01);
+}
+
+h1:hover {
+    color: #F7F9FB;
+    font-weight: normal;
+}
+
+img:hover {
+    filter: grayscale(5%); /* brings back most of image's color when hovered over */
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+/* Contact form */
+
+/* makes contact form button slide in from right when page loads */
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {bottom: 1.75vw;}
+}
+
+.Pop_Up_Button {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: white;
+    color: black;
+    border: solid;
+    cursor: pointer;
+    position: fixed;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+}
+
+.form-popup {
+    border: 3px solid #F7F9FB;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+}
+
+.form-container {
+    max-width: 49vw;
+    padding: 9px;
+    background-color: #F7F9FB;
+}
+
+/* input fields */
+.form-container input[type=text] {
+    width: 100%;
+    padding: 0.93vw;
+    margin: 0.6vw 0 0.6vw 0;
+    border: none;
+    background: #F7F9FB;
+    font-family: Helvetica, Avant Garde;
+    font-size: 1vw;
+}
+
+/* Submit button */
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+/* Close button */
+.form-container .cancel {
+    background-color: black;
+    color: #F7F9FB;
+    border-color: gray;
+}
+
+/* button styling */
+button {
+    font-family: "Trebuchet MS", Optima;
+    letter-spacing: 0.3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw 1.5vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+button:hover, .form-container .btn:hover {
+    color:#F7F9FB;
+    background-color: black;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: silver;
+}
+
+.form-container .cancel:hover{
+    color: #F7F9FB;
+    background-color: darkred;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: black;
+  }	
+
+/* Footer element */
+footer {
+    padding: 2%;
+    background-color:white;
+}
+
